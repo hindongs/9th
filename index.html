@@ -7,134 +7,267 @@
 
 	<style type="text/css">
 	@import url("https://use.typekit.net/ges6gdk.css");
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 	body,h1,h2,h3,h4,p,ul,li,a,footer{margin:0; padding:0;}
 	.bg-gradation{background:linear-gradient(#1141BA, white);}
+	.bg-gradation-reverse{background:linear-gradient(white, #1141BA);}
 	.bg-white{background-color:white;}
-	.content-wrapper{width:1200px; margin:auto;}
-	.flex{display:flex; flex-wrap:wrap;}
+	.bg-blue{background-color:#1141BA;}
+	.content-wrapper{width:1000px; margin:auto;}
+	.flex{display:flex; flex-wrap:wrap; justify-content:space-between;}
+	.col-2{width:450px;}
 
 	
 	/*헤더*/
-	header{padding:20px 100px;}
-	.logo{margin:auto; color:white; font-family: "kepler-std-semicondensed-cap", serif; font-weight:400; font-style:normal; font-size:26px;}
-	.menu{width:1200px; margin:auto;}
-	.menu-flex{display:flex; gap:50px; flex-wrap:wrap; font-family:'Kepler Std'; font-weight:300; }
+	header{padding-top:20px;}
+	.menu{position:fixed; width:1000px; margin:auto; z-index:999;}
+	.menu-flex{display:flex; gap:50px; flex-wrap:wrap; font-family:'Kepler Std'; font-weight:300;}
+	.logo{margin:auto; color:white; font-family: "kepler-std-semicondensed-cap", serif; font-weight:400; font-style:normal; font-size:26px; background-color: }
+	.logo a{color:white; text-decoration:none; list-style-type:none;}
+	.logo a:hover{color:black; transition:all 0.3s;}
 	li{text-decoration:none; list-style-type:none;}
 	li a{color:white; font-size:20px; line-height:1.8;}
 	li a:hover{color:black; transition:all 0.5s;}
-	.device img{display:block; margin:auto; text-align:center; width:70%; mix-blend-mode: luminosity;}
+	.device img{display:block; margin:auto; width:100%; mix-blend-mode: luminosity;}
 
     /*WHAT IS A.L*/
     .what{display:block;}
 	.what h1{text-align:center; padding-top:50px; font-family: "kepler-std-condensed-display", serif; font-weight:700; font-style:normal; font-size:80px;}
 	.what p{text-align:center; padding-top:20px; line-height:1.6; font-size:18px;}
 	.what ul{width:600px; margin:auto; margin-top:80px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-size:16px;}
-	.what ul li{padding:10px;}
-	.what ul li:first-child{border:1px solid black; background:linear-gradient(-90deg, #1141BA, white); font-family: "kepler-std", serif; font-size:18px; font-weight: 500; font-style: normal;}
-	.what1, .what2, .what3{position:relative;}
-	.what1 img{position:absolute; width:300px; left:662px; top:-65px;}
-	.what2 img{position:absolute; width:450px; left:90px; top:-70px; z-index:999;}
-	.what3 img{position:absolute; width:340px; left:670px; top:-70px;}
 
-/*	MEANS*/
+	.what ul li{padding:10px;}
+	.what ul li:first-child{background:linear-gradient(90deg, #1141BA, white); font-family:"kepler-std", serif; font-size:20px; font-weight:500; font-style:normal; color:white;}
+	.what1, .what2, .what3{position:relative;}
+	.what1>ul {animation:ani 1s infinite alternate;}
+	.what2>ul {animation:ani 1s infinite alternate; animation-delay:0.5s;}
+	.what3>ul {animation:ani 1s infinite alternate; animation-delay:1.5s;}
+		@keyframes ani{
+	   0%{transform:translate(0,0);}
+	   100%{transform:translate(0,10px);}
+	}  
+	.what1 .dog{position:absolute; width:300px; left:560px; top:-64px; z-index:1;}
+	.what1 .what1{position:absolute; width:100px; left:260px; top:-34px; z-index:1; animation: vibration 0.1s infinite;}
+
+	.what2 .cat1{position:absolute; width:450px; left:-10px; top:-70px; z-index:2;}
+	.what2 .what2{position:absolute; width:200px; left:640px; top:-44px; z-index:1; animation: vibration 0.1s infinite;}
+
+	.what3 .human{position:absolute; width:340px; left:570px; top:-70px; z-index:3;}
+	.what3 .what3{position:absolute; width:80px; left:310px; top:60px; z-index:1; animation: vibration 0.1s infinite;}
+
+		@keyframes vibration {
+	  from {
+	    transform: rotate(1deg);
+	  }
+	  to {
+	    transform: rotate(-1deg);
+	  }
+	}
+
+    /*MEANS*/
 	.mean{display:block; margin-top:190px;}
-	.mean .marquee{border:1px solid black; background-color:#1141BA; color:white; font-family: "kepler-std", serif;font-weight: 500; font-style: normal; font-size:18px; height:50px; overflow:hidden; position:relative; line-height:2.5;}
-	.mean .marquee div{display:block; width:100%; height:30px; position:absolute; overflow:hidden; animation: marquee 10s linear infinite;}
-	.mean .marquee span{float:left;}
+	.mean MARQUEE {height:50px; border:1px solid black; background-color:#1141BA; color:white; font-family: "kepler-std", serif; font-weight: 500; font-style: normal; font-size:18px; line-height:2.5; padding-left:100px;}
+	@keyframes scrollText {from   { transform: translateX(0%); }to { transform: translateX(-50%); }}
+	.mean MARQUEE span{float:left;}
 	@keyframes marquee {0% { left: 0; } 100% { left: -100%; }}
 	.mean h1{text-align:center; padding-top:150px;font-family: "kepler-std", serif; font-weight: 900; font-style: normal; font-size:80px;}
 	.mean p{text-align:center;}
 	.mean .caption{text-align:center; padding-top:20px;}
 	.mean .caption p{display:inline; border:1px solid black; padding:13px; border-radius:30px; margin-left:10px;}
+	.mean .caption p:hover{background:white; transition:all 0.3s;}
 	.mean p{margin-top:50px; line-height:1.6; font-size:18px;}
 
 	/*typo*/
 	.typo{display:block; margin-top:120px;}
 	.typo .arrow{display:block; text-align:center; margin:auto; width:30px; margin-top:50px; margin-bottom:50px;}
-	.typo .goal p{font-family:"kepler-std-condensed-subhead", serif;font-weight: 600; font-style: normal; font-size:140px; line-height:1.1;letter-spacing:2px; text-align:center;}
+	.typo .goal>p{font-family:"kepler-std-condensed-subhead", serif;font-weight: 600; font-style: normal; font-size:140px; line-height:1.1; letter-spacing:2px; text-align:center;}
 	.typo .goal{position:relative;}
-	.typo .goal .bear{position:absolute; width:300px; left:-20px; top:-180px;}
-	.typo .goal .fox{position:absolute; width:250px; left:440px; top:-55px;}
-	.typo .goal .zebra{position:absolute; width:300px; right:-80px; top:-90px;}
-	.typo .goal .turtle{position:absolute; width:300px; left:-20px; top:200px;}
-	.typo .goal .kanguroo{position:absolute; width:300px; right:80px; top:260px;}
-	.typo .goal .elephant{position:absolute; width:300px; left:350px; top:430px;}
-	.typo .goal .otter{position:absolute; width:300px; left:-20px; top:750px;}
-	.typo .goal .giraffe{position:absolute; width:300px; right:70px; top:630px;}
+	.typo .goal img{animation: motion 0.8s linear 0s infinite alternate;}
+	.typo .goal .bear{position:absolute; width:300px; left:-20px; top:-180px; animation-delay:1s;}
+	.typo .goal .bear_text{position:absolute; width:300px; left:100px; top:10px; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .fox{position:absolute; width:250px; left:440px; top:-55px; animation-delay:0.3s;}
+	.typo .goal .fox_text{position:absolute; width:250px; left:540px; top:160px; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .zebra{position:absolute; width:300px; right:-120px; top:-90px; animation-delay:1s;}
+	.typo .goal .zebra_text{position:absolute; width:300px; right:80px; top:10px; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .turtle{position:absolute; width:300px; left:-20px; top:200px; animation-delay:0.7s;}
+	.typo .goal .turtle_text{position:absolute; width:300px; left:-20px; top:330px; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .kanguroo{position:absolute; width:300px; right:80px; top:260px; animation-delay:1s;}
+	.typo .goal .kanguroo_text{position:absolute; width:300px; right:-150px; top:330px; text-align:left; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.5px;}
+	.typo .goal .elephant{position:absolute; width:300px; left:350px; top:430px; animation-delay:0.2s;}
+	.typo .goal .elephant_text{position:absolute; width:300px; left:610px; top:640px; text-align:left; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .otter{position:absolute; width:300px; left:-20px; top:750px; animation-delay:1s;}
+	.typo .goal .otter_text{position:absolute; width:300px; left:120px; top:760px; text-align:left; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	.typo .goal .giraffe{position:absolute; width:300px; right:10px; top:630px; animation-delay:0.2s;}
+	.typo .goal .giraffe_text{position:absolute; width:300px; right:-160px; top:760px; text-align:left; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:15px; letter-spacing:0.2px;}
+	@keyframes motion {0% {margin-top: 0px;} 100% {margin-top: 10px;}}
 
 	/*how*/
 	.how{display:block; margin-top:120px;}
-	.how h1{border:1px solid black; margin-top:400px; padding:100px; text-align:center; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:80px;}
-	.how ul{border:1px solid black; padding:100px;}
+	.how #how h1{border:1px solid black; margin-top:400px; padding:100px; text-align:center; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:80px;}
+	.how #how .manual{display:block;}
+	.how #how .manual ul{border-top:none; border:1px solid black; height:400px; padding:100px;}
+	.how #how .manual li{float:left; display:inline-block; margin:0 100px 0 100px;}
+	.how #how .manual li img{display:block;}
 
-/*	when*/
-	.when{display:block; margin-top:120px;}
-	.when img{display:block; margin:auto; text-align:center; width:70%; mix-blend-mode: luminosity;}
+    /*when*/
+	.when{display:block;}
+	.when img{display:block; margin:auto; text-align:center; width:80%; mix-blend-mode:luminosity;}
+	.when img:hover{animation: rotate_image 2s linear infinite;}
+				@keyframes rotate_image{
+		    100% {
+		        transform: rotate(360deg);
+		    }
+		}
+
 	.when h1{text-align:center; padding-top:150px; font-family: "kepler-std-condensed-display", serif; font-weight:700; font-style:normal; font-size:80px;}
 	.when p{text-align:center; padding-top:20px; line-height:1.6; font-size:18px;}
-	.when ul{width:600px; margin:auto; margin-top:80px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-size:16px;}
-	.when ul li{padding:10px;}
-	.when ul li:first-child{border:1px solid black; background:linear-gradient(-90deg, #1141BA, white); font-size:18px;}
+	.when ul{margin:auto; margin-top:60px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-size:16px;}
+	.when ul li{padding:20px;}
+	.when ul li:first-child{background:linear-gradient(90deg, #1141BA, white); font-size:20px; color:white;}
 
-/*	review*/
+	/*review*/
 	.review{display:block; margin-top:120px;}
 	.review h1{text-align:center; padding-top:150px; font-family: "kepler-std-condensed-display", serif; font-weight:700; font-style:normal; font-size:80px;}
-	.review ul{width:600px; margin:auto; margin-top:80px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-size:16px;}
+	.review .example{width:600px; display:block; margin:auto; position:relative; }
+	.review ul{position:relative; margin:80px 0 10px 0; z-index:999;}
+	.review p{padding-bottom:10px;}
+	.review ul li{margin:auto; margin-bottom:50px; padding:30px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-size:16px; z-index:990;}
+	.review img{animation: motion 0.8s linear 0s infinite alternate;}
+	.review .cat{position:absolute; width:350px; right:-250px; top:-150px; animation-delay:1s; z-index:50;}
+	.review .turtle2{position:absolute; width:350px; left:-300px; top:150px; animation-delay:1.5s; z-index:50;}
+	.review .hamster{position:absolute; width:300px; right:-200px; top:350px; z-index:50;}
+
+	/*ex*/
+	.ex{display:block;}
+	.ex p{text-align:center; line-height:1.6; font-size:20px; margin-top:200px;}
+	.ex .logo{text-align:center; margin:auto; margin-top:50px;}
+	.ex .logo img{width:200px;}
+	.ex .logo img:hover{transform: scale(1.4); transition:.5s;}
+
+	/*buy*/
+	.buy{display:block; height:500px;}
+	.buy p{padding-top:200px; text-align:center; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:80px; color:white;}
+	.popup_btn a {display:inline-block; width:80px; font-size:18px; text-align:center; margin:auto; display:block; background-color:whtie; border:1px solid white; padding:10px 50px; margin-top:50px; text-decoration: none; color:white;}
+	.popup_btn a:hover{background-color:black; color:white;}
+
+	.overlay {position: fixed; top: 0; bottom: 0; left: 0;right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; z-index: 999;}
+
+	.overlay:target {visibility: visible; opacity: 1;}
+
+	.popup {position: fixed;
+	  width: 60%;
+	  padding: 20px;
+	  max-width: 500px;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  background: rgba(255, 255, 255, .9);
+	  /* "delay" the visibility transition */
+	  -webkit-transition: opacity .5s, visibility 0s linear .5s;
+	  transition: opacity .5s, visibility 0s linear .5s;
+	  z-index: 1;
+	}
+
+	.popup:target {
+	  visibility: visible;
+	  opacity: 1;
+	  /* cancel visibility transition delay */
+	  -webkit-transition-delay: 0s;
+	  transition-delay: 0s;
+	}
+
+	.popup-close {
+	  position: absolute;
+	  padding: 10px;
+	  max-width: 500px;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  background: rgba(255, 255, 255, .9);
+	}
+
+	.popup .close {
+	  position: absolute;
+	  right: 5px;
+	  top: 5px;
+	  padding: 5px;
+	  color: #000;
+	  transition: color .3s;
+	  font-size: 2em;
+	  line-height: .6em;
+	  font-weight: bold;
+	}
+
+	.popup .close:hover {
+	  color: #1141BA;
+	}
+
+	/*footer*/
+	footer{display:flex; margin:0; border:1px solid black;}
+	footer .foot{height:100px; text-align:center; margin:auto; padding-top:50px; padding-bottom:150px;}
+	footer h3{padding:50px 0 20px 0; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:50px;}
+	footer p{font-size:15px; line-height:22px;}
+	
+	
+
 
 	</style>
 </head>
 <body>
 	<header class="bg-gradation">
-		<section class="content-wrapper">
+		<div class="content-wrapper">
 			<nav>
 				<div class="menu">
 					<ul class="menu-flex">
-						<li><a href="??.com">WHAT IS A.L</a></li>
-						<li><a href="??.com">HOW TO USE</a></li>
-						<div class="logo"><h1>ANI-LINGUAL</h1></div>
-						<li><a href="??.com">WHEN TO USE</a></li>
-						<li><a href="??.com">REVIEW</a></li>
+						<li><a href="#what">WHAT IS A.L</a></li>
+						<li><a href="#how">HOW TO USE</a></li>
+						<div class="logo"><a href="https://hindongs.github.io/9th/"><h1>ANI-LINGUAL</h1></a></div>
+						<li><a href="#when">WHEN TO USE</a></li>
+						<li><a href="#review">REVIEW</a></li>
 					</ul>
 				</div>
 			</nav>
 			<div class="device">
-				<img src="device.png">
+				<img src="device.gif">
 			</div>
-		</section>
+		</div>
 	</header>
 	<section class="what bg-white">
+		<div id="what">
 		<div class="content-wrapper">
 			<h1>What Is Ani-Lingual?</h1>
 			<p>아래와 같은 상황을 겪어본 동물, 집사분들이라면<br>애니링구얼에 주목해주세요!</p>
 			<div class="what1">
-				<img src="what1.png">
+				<img src="what1.png" class="dog">
+				<img src="what1_bubble.png" class="what1">
 				<ul>
 					<li>WARNING!</li>
 					<li>같은 동물친구와 얘기하고 싶은데<br>언어가 달라서 대화를 포기했다고요?</li>
 				</ul>
 			</div>
 			<div class="what2">
-				<img src="what2.png">
+				<img src="what2.png" class="cat1">
+				<img src="what2_bubble.png" class="what2">
 				<ul>
 					<li>WARNING!</li>
 					<li>오늘도 착하지만 눈치없는 주인놈과<br>말이 안통해서 복장이 터졌나요?</li>
 				</ul>
 			</div>
 			<div class="what3">
-				<img src="what3.png">
+				<img src="what3.png" class="human">
+				<img src="what3_bubble.png" class="what3">
 				<ul>
 					<li>WARNING!</li>
 					<li>오늘도 우리 아이(동물)의 말을<br>잘못 받아들여 진땀을 뺐나요? </li>
 				</ul>
 			</div>
 		</div>
+		</div>
 	</section>
 	<section class="mean bg-gradation">
-		<div class="marquee">
-				<div>
-					<span>It means being able to speak and hear any language, including animal language. It is a translator capable of two-way communication between humans and animals as well as between animals. The ultimate goal of Anylingual is to create a world where all animals can communicate.</span>
-				</div>
-			</div>
+		<MARQUEE behavior="scroll" scrollamount="20" loop="infinite">
+				<span>It means being able to speak and hear any language, including animal language. It is a translator capable of two-way communication between humans and animals as well as between animals. It means being able to speak and hear any language, including animal language. It is a translator capable of two-way communication between humans and animals as well as between animals.</span>
+		</MARQUEE>
 		<div class="content-wrapper">
 			<h1>ANI-LINGUAL</h1>
 			<div class="caption">
@@ -148,87 +281,156 @@
 				<div class="goal">
 					<p>The ultimate goal<br>of Any-lingual is to<br>create a world<br>where all animals<br>can communicate.</p>
 					<img src="bear.png" class="bear">
+					<p class="bear_text">오늘도 찢었다</p>
 					<img src="fox.png" class="fox">
+					<p class="fox_text">지금 입고있잖아</p>
 					<img src="zebra.png" class="zebra">
+					<p class="zebra_text">내 줄무늬 옷 봤니</p>
 					<img src="turtle.png" class="turtle">
+					<p class="turtle_text">나는 조깅중</p>
 					<img src="kanguroo.png" class="kanguroo">
+					<p class="kanguroo_text">권투하는 중<br>원투원투</p>
 					<img src="elephant.png" class="elephant">
+					<p class="elephant_text">다들 뭐해?</p>
 					<img src="otter.png" class="otter">
+					<p class="otter_text">다들 바쁘게 사네</p>
 					<img src="giraffe.png" class="giraffe">
+					<p class="giraffe_text">망 보는 중</p>
 				</div>
 		</div>
 	</section>
 	<section class="how bg-white">
-		<h1>How to use Ani-lingual?</h1>
-		<div class="content-wrapper">
-			<ul>
-				<li>동물의 타입을 선택하세요.(사람일 경우 사람항목을 선택하세요.)</li>
-				<img src="how1.png">
-				<li>녹음버튼을 누르세요.</li>
-				<img src="how2.png">
-				<li>동물의 호흡이나 소리를 녹음하세요. (사람의 경우 말하세요.)</li>
-				<img src="how3.png">
-				<img src="how4.png">
-				<li>데이터베이스에 저장된 소리를 확인하고 분석 후 번역이 표시됩니다.</li>
-				<img src="how5.png">
-				<li>동물에게 감사의 인사를 전하세요.</li>
-				<img src="how6.png">
-			</ul>
+		<div id="how">
+			<h1>How to use Ani-lingual?</h1>
+			<div class="manual">
+				<ul>
+					<li>
+						① 동물의 타입을 선택하세요.<br>(사람일 경우 사람항목을 선택하세요.)
+						<img src="how1.png">
+					</li>
+					<li>
+						② 녹음버튼을 누르세요.
+						<img src="how2.png">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						③ 동물의 호흡이나 소리를 녹음하세요. (사람의 경우 말하세요.)
+						<img src="how3.png">
+					</li>
+				</ul>
+				<ul>
+					<li>
+						④ 데이터베이스에 저장된 소리를 확인하고 분석 후 번역이 표시됩니다.
+						<img src="how4.png">
+					</li>
+					<li>
+						⑤ 동물에게 감사의 인사를 전하세요.
+						<img src="how5.png">
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 	<section class="when bg-gradation">
+		<div id="when">
 		<div class="content-wrapper">
 			<h1>When to use Ani-lingual?</h1>
 			<p>애니링구얼을 언제 사용하면 좋을지 상황별 예시를 알려드립니다.</p>
 			<img src="device.png">
-			<div class="when1">
-				<ul>
-					<li>일상에서 구체적인 의사 전달</li>
-					<li>배고파 로얄캐닌 습식사료<br>한 바가지 먹고싶어 많이 줘.<br>나 지금 쉬 마려운데 배변패드<br>3일전부터 썼더니 찝찝해 갈아줘.<br>마 주인아 서마터폰 그만하고 산책가자.</li>
-				</ul>
-			</div>
-			<div class="when2">
-				<ul>
-					<li>위급상황에서 급하게 요청</li>
-					<li>주인아 나 아까 길에서 주워먹은<br>치즈가 상했나봐 위 아파 병원가자.<br>산책갔다 와서 진드기가 붙었나봐<br>머리에서 12cm 떨어진 등<br>쪽이 간지러워 얼른 떼줘.</li>
-				</ul>
-			</div>
-			<div class="when3">
-				<ul>
-					<li>동물이 납득할 수 있도록 상황 설명</li>
-					<li>흰동아 오늘은 태풍이 불어서<br>못 나가 미안해<br>대신 내일 두번 나가자.<br>지금 간단하게 건강검진하러<br>병원가는거야<br>금방 끝나니까 너무 걱정하지 마.</li>
-				</ul>
-			</div>
-			<div class="when4">
-				<ul>
-					<li>다양한 감정을 함께 공유</li>
-					<li>같은 동물친구를<br>사귀고 싶을 때<br>서로 말장난을 치며 친밀감을<br>형성하고 싶을 때<br>일상에서 희노애락을<br>공유하고 싶을 때 </li>
-				</ul>
+			<div class="content-wrapper flex">
+				<div class="when1 col-2">
+					<ul>
+						<li>일상에서 구체적인 의사 전달</li>
+						<li>배고파 로얄캐* 습식사료<br>한 바가지 먹고싶어 많이 줘.<br><br>나 지금 쉬 마려운데 배변패드<br>3일전부터 썼더니 찝찝해 갈아줘.<br><br>마 주인아 서마터폰 그만하고 산책가자.</li>
+					</ul>
+				</div>
+				<div class="when2 col-2">
+					<ul>
+						<li>위급상황에서 급하게 요청</li>
+						<li>주인아 나 아까 길에서 주워먹은<br>치즈가 상했나봐 위 아파 병원가자.<br><br>산책갔다 와서 진드기가 붙었나봐<br>머리에서 12cm 떨어진 등<br>쪽이 간지러워 얼른 떼줘.</li>
+					</ul>
+				</div>
+				<div class="when3 col-2">
+					<ul>
+						<li>동물이 납득할 수 있도록 상황 설명</li>
+						<li>흰동아 오늘은 태풍이 불어서<br>못 나가 미안해<br>대신 내일 두번 나가자.<br><br>지금 간단하게 건강검진하러<br>병원가는거야<br>금방 끝나니까 너무 걱정하지 마.</li>
+					</ul>
+				</div>
+				<div class="when4 col-2">
+					<ul>
+						<li>다양한 감정을 함께 공유</li>
+						<li>같은 동물친구를 사귀고 싶을 때<br><br>서로 말장난을 치며 친밀감을<br>형성하고 싶을 때<br><br>일상에서 희노애락을<br>공유하고 싶을 때 </li>
+					</ul>
+				</div>
 			</div>
 		</div>
+	</div>
 	</section>
 	<section class="review bg-white">
+		<div id="review">
 		<div class="content-wrapper">
 			<h1>Review of Ani-lingual</h1>
-			<div class="review1">
-				<ul>
-					<li>고양이 K님</li>
-					<li>집사가 눈치가 좀 없어서, 맛없는 간식을 대용량으로 사다뒀는데<br>애니링구얼로 하소연했더니 다른 맛난 간식 사다줬어요.</li>
-				</ul>
+			<div class="example">
+				<div class="review1">
+					<img src="review1.png" class="cat">
+					<ul>
+						<p>고양이 G님</p>
+						<li>집사가 눈치가 좀 없어서, 맛없는 간식을 대용량으로 사다뒀는데<br>애니링구얼로 하소연했더니 다른 맛난 간식 사다줬어요.</li>
+					</ul>
+				</div>
+				<div class="review2">
+					<img src="review2.png" class="turtle2">
+					<ul>
+						<p>거북이 G님</p>
+						<li>적적하던 참에 주인한테 애니링구얼 통해 친구 만들어달라고 해봤<br>습니다. 덕분에 느림보 동호회에 들어 매주 친구들과 조깅 중입니다. </li>
+					</ul>
+				</div>
+				<div class="review3">
+					<img src="review3.png" class="hamster">
+					<ul>
+						<p>햄스터 H님</p>
+						<li>집에 같이 사는 금붕어랑 놀고 싶었는데 애니링구얼을 두고 말하니<br>이제야 말이 통해서 하루종일 수다 떠는 중이에요. 살 맛이 납니다.</li>
+					</ul>
+				</div>
 			</div>
-			<div class="review2">
-				<ul>
-					<li>거북이 G님</li>
-					<li>적적하던 참에 주인한테 애니링구얼 통해 친구 만들어달라고 해봤<br>습니다. 덕분에 느림보 동호회에 들어 매주 친구들과 조깅 중입니다. </li>
-				</ul>
-			</div>
-			<div class="review3">
-				<ul>
-					<li>햄스터 G님</li>
-					<li>집에 같이 사는 금붕어랑 놀고 싶었는데 애니링구얼을 두고 말하니<br>이제야 말이 통해서 하루종일 수다 떠는 중이에요. 살 맛이 납니다.</li>
-				</ul>
+		</div>
+	</div>
+	</section>
+	<section class="ex bg-gradation-reverse">
+		<div class="content-wrapper">
+			<p>이렇게나 많은 동물친화 기업들이 애니링구얼과 함께하고 있어요!</p>
+			<div class="logo">
+				<img src="logo1.png">
+				<img src="logo2.png">
+				<img src="logo3.png">
+				<img src="logo4.png">
 			</div>
 		</div>
 	</section>
+	<section class="buy bg-blue">
+		<div class="content-wrapper">
+			<p>Let's talk together!</p>
+			<div class="popup_btn">
+				<a href="#pop01">구매하기</a>
+			</div>
+		</div>
+
+		<div id="pop01" class="overlay">
+			<div class="popup">
+		    <a href="#none" class="close">&times;</a>
+		    구매 페이지 준비 중입니다!
+		</div>
+</div>
+	</section>
+	<footer class="bg-white">
+		<div class="content-wrapper">
+			<div class="foot">
+				<h3>ANI-LINGUAL</h3>
+				<p>Copyright © 2023 Hindong Inc. All rights reserved.<br>
+				개인정보 처리방침 / 웹 사이트 이용 약관 / 판매 및 환불 법적 고지 / 사이트 맵</p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
