@@ -157,32 +157,17 @@
 	.buy{display:block; height:500px;}
 	.buy p{padding-top:200px; text-align:center; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:80px; color:white;}
 	.popup_btn a {display:inline-block; width:80px; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:18px; letter-spacing:0.2px; text-align:center; margin:auto; display:block; background-color:whtie; border:1px solid white; padding:10px 50px; margin-top:50px; text-decoration: none; color:white;}
-	.popup_btn a:hover{background-color:black; color:white;}
+	.popup_btn a:hover{background-color:black; color:white; border:1px solid black;}
 
 	.overlay {position: fixed; top: 0; bottom: 0; left: 0;right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; z-index: 999;}
 
 	.overlay:target {visibility: visible; opacity: 1;}
 
-	.popup {position: fixed; width: 60%; padding: 20px; max-width: 500px; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, .9); -webkit-transition: opacity .5s, visibility 0s linear .5s; transition: opacity .5s, visibility 0s linear .5s; z-index: 1; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px; letter-spacing:0.2px;
-	}
+	.popup {position: fixed; width: 60%; padding: 20px; max-width: 500px; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, .9); -webkit-transition: opacity .5s, visibility 0s linear .5s; transition: opacity .5s, visibility 0s linear .5s; z-index: 1; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px; letter-spacing:0.2px;}
 
-	.popup:target {
-	  visibility: visible;
-	  opacity: 1;
-	  /* cancel visibility transition delay */
-	  -webkit-transition-delay: 0s;
-	  transition-delay: 0s;
-	}
+	.popup:target {visibility: visible; opacity: 1; -webkit-transition-delay: 0s;transition-delay: 0s;}
 
-	.popup-close {
-	  position: absolute;
-	  padding: 10px;
-	  max-width: 500px;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  background: rgba(255, 255, 255, .9);
-	}
+	.popup-close {position: absolute; padding: 10px; max-width: 500px; top: 50%;left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, .9);}
 
 	.popup .close {
 	  position: absolute;
