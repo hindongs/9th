@@ -22,8 +22,8 @@
 	/*헤더*/
 	header{padding-top:20px;}
 	.menu{position:fixed; width:1000px; margin:auto; z-index:999;}
-	.menu-flex{display:flex; gap:50px; flex-wrap:wrap; font-family: "kepler-std", serif; font-weight: 400; font-style: normal;}
-	.logo{margin:auto; color:white; font-family: "kepler-std-semicondensed-cap", serif; font-weight:400; font-style:normal; font-size:26px; background-color: }
+	.menu-flex{display:flex; gap:50px; flex-wrap:wrap; font-family: "kepler-std", serif; font-weight: 400; font-style: normal; text-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+	.logo{margin:auto; color:white; font-family: "kepler-std-semicondensed-cap", serif; font-weight:400; font-style:normal; font-size:26px; background-color:}
 	.logo a{color:white; text-decoration:none; list-style-type:none;}
 	.logo a:hover{color:black; transition:all 0.3s;}
 	li{text-decoration:none; list-style-type:none;}
@@ -35,9 +35,9 @@
     .what{display:block;}
 	.what h1{text-align:center; padding-top:50px; font-family: "kepler-std-condensed-display", serif; font-weight:700; font-style:normal; font-size:80px;}
 	.what p{text-align:center; padding-top:20px; line-height:1.6; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:18px;}
-	.what ul{width:600px; margin:auto; margin-top:80px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
+	.what ul{width:600px; margin:auto; margin-top:80px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:18px; border-radius:10px;}
 	.what ul li{padding:10px;}
-	.what ul li:first-child{background:linear-gradient(90deg, #1141BA, white); font-family: "lores-12", sans-serif; font-weight: 400; font-style: normal; color:white;}
+	.what ul li:first-child{background:linear-gradient(90deg, #1141BA, #0C369F); font-family: "lores-12", sans-serif; font-weight: 400; font-style: normal; color:white; border-radius:10px 10px 0 0;}
 	.what1, .what2, .what3{position:relative;}
 	.what1>ul {animation:ani 1s infinite alternate;}
 	.what2>ul {animation:ani 1s infinite alternate; animation-delay:0.5s;}
@@ -108,8 +108,8 @@
 	.how h1{text-align:center; font-family: "kepler-std-condensed-subhead", serif; font-weight: 700; font-style: normal; font-size:80px;}
 	.how p{text-align:center; padding-top:20px; line-height:1.6; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:18px;}
 	.wrap{width:100%; margin:auto; padding:200px 0;}
-	.wrap1{width:2250px; margin:auto; padding:50px; overflow:auto; display:flex; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
-	.wrap2{width:2250px; margin:auto; padding:50px; overflow:auto; display:flex; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
+	.wrap1{width:2500px; margin:auto; padding:50px; overflow:auto; display:flex; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
+	.wrap2{width:2600px; margin:auto; padding:50px; overflow:auto; display:flex; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
 	.wrap img{display:inline-block; height:400px; width:auto; margin-right:50px; }
 
 
@@ -125,7 +125,7 @@
 
 	.when h1{text-align:center; padding-top:150px; font-family: "kepler-std-condensed-display", serif; font-weight:700; font-style:normal; font-size:80px;}
 	.when p{text-align:center; padding-top:20px; line-height:1.6; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:18px;}
-	.when ul{margin:auto; margin-top:60px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px;}
+	.when ul{margin:auto; margin-top:40px; margin-bottom:50px; text-align:center; border:1px solid black; background-color:white; line-height:1.4; font-family:"Noto Sans KR"; font-weight:400; font-style: normal; font-size:16px; border-radius:10px;}
 	.when1{animation:when 1s infinite alternate;}
 	.when2{animation:when 1s infinite alternate; animation-delay:0.5s;}
 	.when3{animation:when 1s infinite alternate; animation-delay:1s;}
@@ -134,8 +134,8 @@
 	   0%{transform:translate(0,0);}
 	   100%{transform:translate(0,10px);}
 	}  
-	.when ul li{padding:15px;}
-	.when ul li:first-child{background:linear-gradient(90deg, #1141BA, white); font-size:20px; color:white;}
+	.when ul li{padding:30px;}
+	.when ul li:first-child{background:linear-gradient(90deg, #1141BA, #0C369F); font-size:18px; color:white; padding:15px; border-radius:10px 10px 0 0;}
 
 	/*review*/
 	.review{display:block; margin-top:120px;}
@@ -150,12 +150,12 @@
 	.review .meal{position:absolute; width:300px; left:-200px; top:-40px; animation-delay:1s;}
 	.review .review1_bubble{position:absolute; width:200px; left:-300px; top:100px; animation: vibration 0.1s infinite;}
 	.review .turtle2{position:absolute; width:380px; left:-380px; top:280px; animation-delay:1.5s;}
-	.review .snail{position:absolute; width:280px; right:-110px; top:140px; animation-delay:1.5s; z-index:50;}
-	.review .speed{position:absolute; width:380px; right:-400px; top:250px; animation-delay:1.5s;}
-	.review .review2_bubble{position:absolute; width:100px; right:-50px; top:320px; z-index:50; animation: vibration 0.1s infinite;}
-	.review .hamster{position:absolute; width:350px; right:-200px; top:450px; z-index:50; animation-delay:2s;}
+	.review .snail{position:absolute; width:280px; right:140px; top:360px; animation-delay:1.5s; z-index:50;}
+	.review .speed{position:absolute; width:380px; right:-400px; top:200px; animation-delay:1.5s;}
+	.review .review2_bubble{position:absolute; width:100px; right:-50px; top:270px; z-index:50; animation: vibration 0.1s infinite;}
+	.review .hamster{position:absolute; width:350px; right:-250px; top:450px; z-index:50; animation-delay:2s;}
 	.review .goldfish{position:absolute; width:330px; left:-150px; top:500px;}
-	.review .review3_bubble{position:absolute; width:220px; left:420px; top:660px; animation: vibration 0.1s infinite;}
+	.review .review3_bubble{position:absolute; width:220px; left:480px; top:670px; animation: vibration 0.1s infinite;}
 
 
 
@@ -336,9 +336,9 @@
 						<p>③ 동물에게 전할 말을 녹음하세요.</p>
 						<img src="how8.png">
 					</div>
-					<div class="how4">
+					<div class="how9">
 						<p>④ 데이터베이스에 저장된 소리를 확인하고<br>분석 후 동물의 언어로 출력됩니다.</p>
-						<img src="how4.png">
+						<img src="how9.png">
 					</div>
 					<div class="how5">
 						<p>⑤ 동물에게 감사의 인사를 전하세요.</p>
@@ -353,7 +353,7 @@
 		<div class="content-wrapper">
 			<h1>When to use Ani-lingual?</h1>
 			<p>애니링구얼을 언제 사용하면 좋을지 상황별 예시를 알려드립니다.</p>
-			<img src="device.png">
+			<img src="device2.gif">
 			<div class="content-wrapper flex">
 				<div class="when1 col-2">
 					<ul>
@@ -387,7 +387,7 @@
 		<div id="review">
 		<div class="content-wrapper">
 			<h1>Review of Ani-lingual</h1>
-			<p>동물 고객들의 극찬이 가득한 후기!</p>
+			<p>동물 고객들의 극찬이 가득한 후기를 살펴보세요.</p>
 			<div class="example">
 				<div class="review1">
 					<img src="review1.png" class="cat">
